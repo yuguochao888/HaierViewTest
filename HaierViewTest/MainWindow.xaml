@@ -14,16 +14,14 @@
             <ColumnDefinition Width="143*"/>
             <ColumnDefinition Width="651*"/>
         </Grid.ColumnDefinitions>
-        <dxwui:HamburgerMenu Margin="0,0,-0.4,0" AvailableViewStates="Flyout" Grid.ColumnSpan="2">
+        <dxwui:HamburgerMenu Name="HamburgerMenu" Margin="0,0,-0.4,0" AvailableViewStates="Flyout" Grid.ColumnSpan="2">
             <dxwui:HamburgerMenu.BottomBarItems>
                 <dxwui:HamburgerMenuBottomBarNavigationButton Content="Settings" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Setup/Properties_16x16.png}" GlyphHeight="16"/>
                 <dxwui:HamburgerMenuBottomBarNavigationButton Content="About" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Support/Info_16x16.png}" GlyphHeight="16"/>
             </dxwui:HamburgerMenu.BottomBarItems>
-            <dxwui:HamburgerMenu.Content>
-                <dxwui:NavigationFrame/>
-            </dxwui:HamburgerMenu.Content>
-            <dxwui:HamburgerMenuNavigationButton Content="测试" GlyphWidth="32" GlyphHeight="32" IsSelected="True" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Find.svg}"/>
-            <dxwui:HamburgerMenuNavigationButton Content="设置" GlyphWidth="32" GlyphHeight="32" Glyph="{dx:DXImage SvgImages/Setup/PageSetup.svg}"/>
+   
+            <dxwui:HamburgerMenuNavigationButton Content="测试" GlyphWidth="32" GlyphHeight="32" IsSelected="True" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Find.svg  }"  Click="ButtonBase_OnClick"/>
+            <dxwui:HamburgerMenuNavigationButton Content="设置" GlyphWidth="32" GlyphHeight="32" Glyph="{dx:DXImage SvgImages/Setup/PageSetup.svg}" Click="ButtonBase1_OnClick"/>
             <dxwui:HamburgerMenuHyperlinkButton Content="Support" NavigateUri="https://www.devexpress.com/Support/"/>
         </dxwui:HamburgerMenu>
     </Grid>

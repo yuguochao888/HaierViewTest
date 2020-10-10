@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HaierViewTest.Views;
 
 namespace HaierViewTest
 {
@@ -20,9 +21,23 @@ namespace HaierViewTest
     /// </summary>
     public partial class MainWindow : Window
     {
+        private TestView testView;
         public MainWindow()
         {
             InitializeComponent();
+             testView=new TestView();
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+           
+            HamburgerMenu.Content = testView;
+
+        }
+
+        private void ButtonBase1_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

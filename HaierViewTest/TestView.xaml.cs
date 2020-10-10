@@ -17,7 +17,7 @@ namespace HaierViewTest
     /// <summary>
     /// TestView.xaml 的交互逻辑
     /// </summary>
-    public partial class TestView : Window
+    public partial class TestView : UserControl
     {
         public TestView()
         {
