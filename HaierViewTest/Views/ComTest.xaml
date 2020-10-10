@@ -1,4 +1,4 @@
-﻿<Window x:Class="HaierViewTest.Views.ComTest"
+﻿<UserControl x:Class="HaierViewTest.Views.ComTest"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,10 +7,10 @@
         xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:viewModels="clr-namespace:HaierViewTest.ViewModels"
         mc:Ignorable="d"
-        Title="ComTest" Height="450" Width="800" Loaded="Window_Loaded">
-    <Window.DataContext>
+       Height="450" Width="800" Loaded="Window_Loaded">
+    <UserControl.DataContext>
         <dxmvvm:ViewModelSource Type="viewModels:ComTestViewModel" />
-    </Window.DataContext>
+    </UserControl.DataContext>
 
     <Grid>
         <Grid.RowDefinitions></Grid.RowDefinitions>
@@ -31,4 +31,4 @@
 
 
     </Grid>
-</Window>
+</UserControl>

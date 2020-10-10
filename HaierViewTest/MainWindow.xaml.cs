@@ -22,10 +22,12 @@ namespace HaierViewTest
     public partial class MainWindow : Window
     {
         private TestView testView;
+        private ComTest tesView1;
         public MainWindow()
         {
             InitializeComponent();
              testView=new TestView();
+             tesView1=new ComTest();
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -37,7 +39,7 @@ namespace HaierViewTest
 
         private void ButtonBase1_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            HamburgerMenu.Content = tesView1;
         }
     }
 }

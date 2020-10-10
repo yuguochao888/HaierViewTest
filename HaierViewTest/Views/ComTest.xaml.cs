@@ -18,7 +18,7 @@ namespace HaierViewTest.Views
     /// <summary>
     /// ComTest.xaml 的交互逻辑
     /// </summary>
-    public partial class ComTest : Window
+    public partial class ComTest : UserControl
     {
         public ComTest()
         {
