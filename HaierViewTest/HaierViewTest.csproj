@@ -86,6 +86,7 @@
     </ApplicationDefinition>
     <Compile Include="Common\IniFile.cs" />
     <Compile Include="Devices\CommDriver.cs" />
+    <Compile Include="Devices\LightDevice.cs" />
     <Compile Include="Model\FriageModel.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\TestModel.cs" />

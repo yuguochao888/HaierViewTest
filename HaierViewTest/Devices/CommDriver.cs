@@ -32,7 +32,7 @@ namespace HaierViewTest.Devices
 
         }
 
-        private bool Write(string value)
+        public bool Write(string value)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace HaierViewTest.Devices
         }
 
 
-        private bool Open()
+        public bool Open()
         {
             try
             {
@@ -71,7 +71,7 @@ namespace HaierViewTest.Devices
 
             return true;
         }
-        private string Read()
+        protected string Read()
         {
             string strRead = string.Empty;
             try
