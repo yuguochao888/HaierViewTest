@@ -95,6 +95,7 @@
     </Compile>
     <Compile Include="ViewModels\ComTestViewModel.cs" />
     <Compile Include="ViewModels\ModelSettingViewModel.cs" />
+    <Compile Include="ViewModels\TestViewViewModel.cs" />
     <Compile Include="ViewModels\ViewModel1.cs" />
     <Compile Include="Views\ComTest.xaml.cs">
       <DependentUpon>ComTest.xaml</DependentUpon>

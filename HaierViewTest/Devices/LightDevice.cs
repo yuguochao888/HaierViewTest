@@ -12,9 +12,12 @@ namespace HaierViewTest.Devices
        private CommDriver _comm;
        public LightDevice(string portName) 
        {
-           SerialPort serialPort=new SerialPort(portName);
-           _comm=new CommDriver(serialPort);
-           _comm.Open();
+           using (SerialPort serialPort = new SerialPort(portName))
+           {
+               _comm = new CommDriver(serialPort);
+               _comm.Open();
+           }
+        
        }
 
        /// <summary>
