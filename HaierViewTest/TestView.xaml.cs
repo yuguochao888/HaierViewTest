@@ -22,6 +22,32 @@ namespace HaierViewTest
         public TestView()
         {
             InitializeComponent();
+            Initialize();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            logBox.AppendText("开始测试-------"+ DateTime.Now+Environment.NewLine);
+            NGSet();
+        }
+
+
+        private void NGSet()
+        {
+            ResultBorder.Background = new SolidColorBrush(Colors.Red);
+            ResultText.Text = "不合格";
+        }
+
+        private void OKSet()
+        {
+
+            ResultBorder.Background = new SolidColorBrush(Colors.Green);
+            ResultText.Text = "合格";
+        }
+
+        private void Initialize()
+        {
+            
         }
     }
 }
