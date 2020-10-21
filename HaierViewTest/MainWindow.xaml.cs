@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataModel;
+using DataModel.Models;
 using HaierViewTest.Views;
 
 namespace HaierViewTest
@@ -25,6 +27,14 @@ namespace HaierViewTest
         private ComTest tesView1;
         public MainWindow()
         {
+            using (var test=new ViewTestEntities())
+            {
+                TestData data=new TestData();
+                test.TestDatas.Add(data);
+                test.SaveChanges();
+            }
+
+
             InitializeComponent();
              testView=new TestView();
              tesView1=new ComTest();

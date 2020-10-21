@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaierViewTest", "HaierViewT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMachineDAL", "AutoMachineDAL\AutoMachineDAL.csproj", "{40FF39A4-FC8F-46B7-9B2F-F6042114BD06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{AEB7EC5A-2299-4E17-B135-B5607DE522E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{40FF39A4-FC8F-46B7-9B2F-F6042114BD06}.Release|Any CPU.Build.0 = Release|Any CPU
 		{40FF39A4-FC8F-46B7-9B2F-F6042114BD06}.Release|x64.ActiveCfg = Release|x64
 		{40FF39A4-FC8F-46B7-9B2F-F6042114BD06}.Release|x64.Build.0 = Release|x64
+		{AEB7EC5A-2299-4E17-B135-B5607DE522E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB7EC5A-2299-4E17-B135-B5607DE522E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB7EC5A-2299-4E17-B135-B5607DE522E6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AEB7EC5A-2299-4E17-B135-B5607DE522E6}.Debug|x64.Build.0 = Debug|Any CPU
+		{AEB7EC5A-2299-4E17-B135-B5607DE522E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB7EC5A-2299-4E17-B135-B5607DE522E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB7EC5A-2299-4E17-B135-B5607DE522E6}.Release|x64.ActiveCfg = Release|Any CPU
+		{AEB7EC5A-2299-4E17-B135-B5607DE522E6}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
