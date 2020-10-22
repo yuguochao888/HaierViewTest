@@ -52,12 +52,18 @@
 
         </GroupBox>
 
-
-        <GroupBox Header="检测图片" Grid.Row="1" Grid.Column="1">
-            <Grid Background="Black" >
-                <Image></Image>
-            </Grid>
-        </GroupBox>
+<Grid Grid.Row="1" Grid.Column="1">
+<Grid.RowDefinitions>
+    <RowDefinition></RowDefinition>
+    <RowDefinition></RowDefinition>
+</Grid.RowDefinitions>
+    <GroupBox Header="检测图片">
+        <Grid Background="Black" >
+            <Image></Image>
+        </Grid>
+    </GroupBox>
+        </Grid>
+        
         <Border Name="ResultBorder"  Background="Green"  Grid.Column="1" Grid.Row="2" Margin="10" >
             <TextBlock FontSize="43" FontWeight="Black" Name="ResultText"  Text="合格" HorizontalAlignment="Center" VerticalAlignment="Center"  />
         </Border>

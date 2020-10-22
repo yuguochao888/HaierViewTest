@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:HaierViewTest"
         xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" 
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion" 
         x:Class="HaierViewTest.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -14,14 +15,15 @@
             <ColumnDefinition Width="143*"/>
             <ColumnDefinition Width="651*"/>
         </Grid.ColumnDefinitions>
-        <dxwui:HamburgerMenu Name="HamburgerMenu" Margin="0,0,-0.4,0" AvailableViewStates="Flyout" Grid.ColumnSpan="2">
+        <dxwui:HamburgerMenu x:Name="HamburgerMenu" Margin="0,0,-0.4,0" AvailableViewStates="Flyout" Grid.ColumnSpan="2">
             <dxwui:HamburgerMenu.BottomBarItems>
                 <dxwui:HamburgerMenuBottomBarNavigationButton Content="Settings" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Setup/Properties_16x16.png}" GlyphHeight="16"/>
                 <dxwui:HamburgerMenuBottomBarNavigationButton Content="About" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Support/Info_16x16.png}" GlyphHeight="16"/>
             </dxwui:HamburgerMenu.BottomBarItems>
-   
-            <dxwui:HamburgerMenuNavigationButton Content="测试" GlyphWidth="32" GlyphHeight="32" IsSelected="True" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Find.svg  }"  Click="ButtonBase_OnClick"/>
+
+            <dxwui:HamburgerMenuNavigationButton Content="测试" GlyphWidth="32" GlyphHeight="32" IsSelected="True" Glyph="{dx:DXImage SvgImages/Icon Builder/Actions_Find.svg}"  Click="ButtonBase_OnClick"/>
             <dxwui:HamburgerMenuNavigationButton Content="设置" GlyphWidth="32" GlyphHeight="32" Glyph="{dx:DXImage SvgImages/Setup/PageSetup.svg}" Click="ButtonBase1_OnClick"/>
+            <dxwui:HamburgerMenuNavigationButton Content="查询" Name="QueryButton" GlyphWidth="32" GlyphHeight="32" Click="QueryButton_OnClick"  Glyph="{dx:DXImage SvgImages/Dashboards/EnableSearch.svg}"/>
             <dxwui:HamburgerMenuHyperlinkButton Content="Support" NavigateUri="https://www.devexpress.com/Support/"/>
         </dxwui:HamburgerMenu>
     </Grid>

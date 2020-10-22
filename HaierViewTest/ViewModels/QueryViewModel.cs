@@ -14,9 +14,9 @@ namespace HaierViewTest.ViewModels
     {
         public ObservableCollection<TestData> TestDatascCollection=new ObservableCollection<TestData>();
 
-        QueryViewModel()
+       public QueryViewModel()
         {
-            TestDatascCollection.AddRange(DataProvider.GetTestDatas().Where(x=>x.DateTime));
+          //  TestDatascCollection.AddRange(DataProvider.GetTestDatas().Where(x=>x.DateTime));
 
         }
 
