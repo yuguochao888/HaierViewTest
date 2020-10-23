@@ -15,8 +15,12 @@ namespace HaierViewTest
     /// </summary>
     public partial class App : Application
     {
+
+        public static ViewTestEntities ViewTestEntities=new ViewTestEntities();
+
         public App() : base()
         {
+
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ViewTestEntities>());
         }
     }

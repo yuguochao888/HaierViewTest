@@ -6,7 +6,23 @@
              xmlns:local="clr-namespace:HaierViewTest.Control"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <UserControl.Resources>
+        <Style x:Key="ShowResult" TargetType="Label">
+           
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource  } }" Value="False">
+                    <Setter Property="Background"  Value="Red"/>
+                    <Setter Property="Content" Value="不合格" ></Setter>
+                </DataTrigger>
+
+                <DataTrigger Binding="{Binding Path=TestReuslt}" Value="True">
+                    <Setter Property="Background"  Value="Green"/>
+                    <Setter Property="Content" Value="合格" ></Setter>
+                </DataTrigger>
+                </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -25,9 +41,9 @@
         <Label Margin="5" Content="测试时间：" Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
 
         <Label Margin="5" Content="{Binding FridgeCode}" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
-        <Label Margin="5" Content="冰箱型号：" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
-        <Label Margin="5" Content="测试结果：" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
-        <Label Margin="5" Content="测试时间：" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+        <Label Margin="5" Content="{Binding FridgeModel}" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+        <Label Margin="5" Style="{StaticResource ShowResult}" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+        <Label Margin="5" Content="{Binding TestTime}" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
 
     </Grid>
 </UserControl>

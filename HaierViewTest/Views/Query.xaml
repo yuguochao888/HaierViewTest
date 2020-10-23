@@ -1,4 +1,4 @@
-﻿<UserControl xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+﻿<UserControl xmlns:Control="clr-namespace:HaierViewTest.Control"  xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -48,7 +48,7 @@
             </StackPanel>
 
         </Border>
-        <dx:SimpleButton   Content="查询" FontSize="20" Margin="5" Width="150" Grid.Column="1" Glyph="{dx:DXImage SvgImages/Spreadsheet/Zoom.svg}" GlyphAlignment="Bottom" ButtonKind="Repeat" />
+        <dx:SimpleButton  Command="{Binding QueryCommand}"  Content="查询" FontSize="20" Margin="5" Width="150" Grid.Column="1" Glyph="{dx:DXImage SvgImages/Spreadsheet/Zoom.svg}" GlyphAlignment="Bottom" ButtonKind="Repeat" />
 
         <dxg:GridControl Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True"
                          ItemsSource="{Binding}">
@@ -60,7 +60,7 @@
             <Image></Image>
         </Border>
 
-
+        <Control:ResultInformation Grid.Row="2" Grid.Column="1"  TestResult="{Binding Path=Result }" FridgeCode="{Binding Path=FridgeCode}" FridgeModel="{Binding Path= FrigeModel}" TestTime="{Binding Path= StartTime}" />
 
 
     </Grid>
