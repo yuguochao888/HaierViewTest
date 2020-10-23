@@ -19,7 +19,7 @@ namespace HaierViewTest.ViewModels
       
 
         public virtual bool Result { set; get; }
-
+        
         public virtual string Model { set; get; } 
 
        public virtual string BarCode { set;get; }
