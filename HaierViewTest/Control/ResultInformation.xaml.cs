@@ -67,17 +67,16 @@ namespace HaierViewTest.Control
            set { SetValue(TestResultProperty, value); }
        }
 
-
        public static readonly DependencyProperty TestTimeProperty = DependencyProperty.Register(
-           "TestTime", typeof(DateTime), typeof(ResultInformation), new PropertyMetadata(default(DateTime)));
+           "TestTime", typeof(string), typeof(ResultInformation), new PropertyMetadata(default(string)));
 
-       public DateTime TestTime
+       public string TestTime
        {
-           get { return (DateTime) GetValue(TestTimeProperty); }
+           get { return (string) GetValue(TestTimeProperty); }
            set { SetValue(TestTimeProperty, value); }
        }
 
-    
+
 
 
        public event PropertyChangedEventHandler PropertyChanged;
