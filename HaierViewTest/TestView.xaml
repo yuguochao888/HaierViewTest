@@ -58,7 +58,7 @@
     <RowDefinition></RowDefinition>
 </Grid.RowDefinitions>
     <GroupBox Header="检测图片">
-        <Grid Background="Black" >
+        <Grid Background="Black" Width="250" Height="250" >
             <Image></Image>
         </Grid>
     </GroupBox>

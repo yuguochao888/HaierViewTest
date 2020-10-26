@@ -52,15 +52,15 @@
         <dx:SimpleButton  Command="{Binding QueryCommand}"  Content="查询" FontSize="20" Margin="5" Width="150" Grid.Column="1" Glyph="{dx:DXImage SvgImages/Spreadsheet/Zoom.svg}" GlyphAlignment="Bottom" ButtonKind="Repeat" />
 
         <dxg:GridControl Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True"
-                         ItemsSource="{Binding}">
+                         ItemsSource="{Binding TestDataCollection}">
             <dxg:GridControl.View>
-                <dxg:TableView ShowTotalSummary="True" />
+                <dxg:TableView ShowTotalSummary="True"/>
             </dxg:GridControl.View>
         </dxg:GridControl>
         <Border Grid.Row="1" Grid.Column="1">
             <Image></Image>
         </Border>
-        <Control:ResultInformation Grid.Row="2" Grid.Column="1" FridgeCode="{Binding Path=BarCode ,Mode=OneWay}" FridgeModel="{Binding Path=Model ,Mode=OneWay}" TestTime="{Binding Path=StartTime ,Mode=OneWay}"  />
+        <Control:ResultInformation Margin="10" Grid.Row="2" Grid.Column="1"  TestResult="{Binding Path=Result}" FridgeCode="{Binding Path=BarCode ,Mode=TwoWay}" FridgeModel="{Binding Path=Model ,Mode=OneWay}" TestTime="{Binding Path=StartTime ,Mode=OneWay}"  />
 
 
 

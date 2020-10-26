@@ -9,13 +9,13 @@
         xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion" 
         x:Class="HaierViewTest.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="视觉检测系统" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="143*"/>
             <ColumnDefinition Width="651*"/>
         </Grid.ColumnDefinitions>
-        <dxwui:HamburgerMenu x:Name="HamburgerMenu" Margin="0,0,-0.4,0" AvailableViewStates="Flyout" Grid.ColumnSpan="2">
+        <dxwui:HamburgerMenu x:Name="HamburgerMenu" Margin="0,0,-0.4,0"  AvailableViewStates="All"  Grid.ColumnSpan="2">
             <dxwui:HamburgerMenu.BottomBarItems>
                 <dxwui:HamburgerMenuBottomBarNavigationButton Content="Settings" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Setup/Properties_16x16.png}" GlyphHeight="16"/>
                 <dxwui:HamburgerMenuBottomBarNavigationButton Content="About" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Support/Info_16x16.png}" GlyphHeight="16"/>

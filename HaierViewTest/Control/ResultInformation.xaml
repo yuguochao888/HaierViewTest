@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:HaierViewTest.Control"
              xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.Resources>
+             d:DesignHeight="450" d:DesignWidth="800" Name="resultInformation">
+    <!--<UserControl.Resources>
         <Style x:Key="ShowResult" TargetType="Label">
            
             <Style.Triggers>
@@ -23,7 +23,7 @@
                 </DataTrigger>
                 </Style.Triggers>
         </Style>
-    </UserControl.Resources>
+    </UserControl.Resources>-->
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -42,12 +42,12 @@
         <Label Margin="5" Content="测试结果：" Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
         <Label Margin="5" Content="测试时间：" Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
 
-        <Label Margin="5" Content="{Binding FridgeCode}" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
-        <Label Margin="5" Content="{Binding FridgeModel}" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
-        <Label Margin="5" Content="{Binding TestTime}" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
-            <!--<Label Margin="5" Style="{StaticResource ShowResult}" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>-->
-            <Label Margin="5" Content="{Binding TestResult,Converter={dxmvvm:BooleanToObjectConverter FalseValue='不合格',TrueValue='合格'}}"
-                   Background="{Binding TestResult,Converter={dxmvvm:BooleanToObjectConverter FalseValue='Red',TrueValue='Green'}}"
+        <Label Margin="5" Content="{Binding ElementName=resultInformation,Path=FridgeCode}" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+        <Label Margin="5" Content="{Binding ElementName=resultInformation,Path=FridgeModel}" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+        <Label Margin="5" Content="{Binding ElementName=resultInformation,Path=TestTime}" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+            <Label Margin="5"  Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
+        <Label Margin="5" Content="{Binding ElementName=resultInformation,Path=TestResult,Converter={dxmvvm:BooleanToObjectConverter FalseValue='不合格',TrueValue='合格'}}"
+                   Background="{Binding ElementName=resultInformation ,Path=TestResult,Converter={dxmvvm:BooleanToObjectConverter FalseValue='Red',TrueValue='Green'}}"
                    Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20"></Label>
 
 

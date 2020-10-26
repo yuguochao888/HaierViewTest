@@ -14,7 +14,12 @@ namespace HaierViewTest.ViewModels
     [POCOViewModel]
     public class QueryViewModel
     {
-        public ObservableCollection<TestData> TestDatascCollection=new ObservableCollection<TestData>();
+      public  QueryViewModel()
+        {
+            QueryCommand=new DelegateCommand(Query);
+            TestDataCollection = new ObservableCollection<TestData>();
+        }
+        public virtual ObservableCollection<TestData> TestDataCollection { set; get; }
 
       
 
@@ -25,15 +30,9 @@ namespace HaierViewTest.ViewModels
        public virtual string BarCode { set;get; }
        public virtual string StartTime { set; get; }
 
-       DelegateCommand _queryCommand;
-       public DelegateCommand QueryCommand
-        {
-           get
-           {
-               return _queryCommand ??
-                      (_queryCommand = new DelegateCommand(Query));
-           }
-       }
+       private DelegateCommand _queryCommand;
+       public DelegateCommand QueryCommand { set; get; }
+      
 
 
        public void Query()

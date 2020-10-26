@@ -37,7 +37,7 @@ namespace HaierViewTest.Control
         #region 冰箱条码
 
         public static readonly DependencyProperty FridgeCodeProperty = DependencyProperty.Register(
-            "FridgeCode", typeof(string), typeof(ResultInformation), new PropertyMetadata(default(string)));
+            "FridgeCode", typeof(string), typeof(ResultInformation), new PropertyMetadata(string.Empty));
 
         /// <summary>
         /// 冰箱条码
@@ -50,7 +50,7 @@ namespace HaierViewTest.Control
 
         #endregion
         public static readonly DependencyProperty FridgeModelProperty = DependencyProperty.Register(
-            "FridgeModel", typeof(string), typeof(ResultInformation), new PropertyMetadata(default(string)));
+            "FridgeModel", typeof(string), typeof(ResultInformation), new PropertyMetadata(string.Empty));
 
         public string FridgeModel
         {
@@ -59,7 +59,7 @@ namespace HaierViewTest.Control
         }
 
         public static readonly DependencyProperty TestResultProperty = DependencyProperty.Register(
-           "TestResult", typeof(bool), typeof(ResultInformation), new PropertyMetadata(default(bool)));
+           "TestResult", typeof(bool), typeof(ResultInformation), new PropertyMetadata(false));
 
        public bool TestResult
        {
@@ -68,15 +68,13 @@ namespace HaierViewTest.Control
        }
 
        public static readonly DependencyProperty TestTimeProperty = DependencyProperty.Register(
-           "TestTime", typeof(string), typeof(ResultInformation), new PropertyMetadata(default(string)));
+           "TestTime", typeof(string), typeof(ResultInformation), new PropertyMetadata(string.Empty));
 
        public string TestTime
        {
            get { return (string) GetValue(TestTimeProperty); }
            set { SetValue(TestTimeProperty, value); }
        }
-
-
 
 
        public event PropertyChangedEventHandler PropertyChanged;

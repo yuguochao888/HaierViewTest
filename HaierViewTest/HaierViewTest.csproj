@@ -168,7 +168,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -188,6 +188,11 @@
       <Project>{AEB7EC5A-2299-4E17-B135-B5607DE522E6}</Project>
       <Name>DataModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="StartUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </SplashScreen>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
