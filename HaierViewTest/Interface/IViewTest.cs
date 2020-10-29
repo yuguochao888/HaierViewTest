@@ -28,6 +28,11 @@ namespace HaierViewTest.Interface
        /// 开始测试
        /// </summary>
        void StartAction();
+        /// <summary>
+        /// 记录日志委托
+        /// </summary>
+        /// <returns></returns>
+       Action<string> SaveLog();
 
    }
 }

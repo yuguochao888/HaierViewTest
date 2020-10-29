@@ -83,10 +83,10 @@
                     </dxg:GridColumn.EditSettings>
                 </dxg:GridColumn>
             </dxg:GridControl.Columns>
-            <dxg:GridControl.View>
+            <dxg:GridControl.View >
 
 
-                <dxg:TableView ShowTotalSummary="True"/>
+                <dxg:TableView ShowGroupPanel="False" ShowTotalSummary="True" ShowDragDropHint="False" AutoExpandOnDrag="False" AllowScrollingOnDrag="False"/>
             </dxg:GridControl.View>
         </dxg:GridControl>
         <Border Grid.Row="1" Grid.Column="1">

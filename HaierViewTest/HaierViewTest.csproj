@@ -50,6 +50,7 @@
     <Reference Include="DevExpress.Xpf.Core.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Grid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Grid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.LayoutControl.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.PivotGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpf.Printing.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -64,6 +65,9 @@
     <Reference Include="hdevenginedotnet">
       <HintPath>..\hdevenginedotnet.dll</HintPath>
     </Reference>
+    <Reference Include="HslCommunication, Version=9.5.0.0, Culture=neutral, PublicKeyToken=cdb2261fa039ed67, processorArchitecture=MSIL">
+      <HintPath>..\packages\HslCommunication.9.5.0\lib\net451\HslCommunication.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
@@ -72,6 +76,9 @@
     </Reference>
     <Reference Include="NationalInstruments.Vision.Common">
       <HintPath>..\NationalInstruments.Vision.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -103,20 +110,32 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Common\Global.cs" />
+    <Compile Include="Common\ImageHelper.cs" />
     <Compile Include="Common\IniFile.cs" />
+    <Compile Include="Control\ComSet.xaml.cs">
+      <DependentUpon>ComSet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Control\DeviceState.xaml.cs">
       <DependentUpon>DeviceState.xaml</DependentUpon>
     </Compile>
     <Compile Include="Control\ResultInformation.xaml.cs">
       <DependentUpon>ResultInformation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control\TCPSet.xaml.cs">
+      <DependentUpon>TCPSet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Devices\CommDriver.cs" />
     <Compile Include="Devices\LightDevice.cs" />
+    <Compile Include="Devices\TCPDriver.cs" />
     <Compile Include="Interface\IViewTest.cs" />
     <Compile Include="Model\FriageModel.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\TestModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Views\SettingView.xaml.cs">
+      <DependentUpon>SettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\SettingViewModel.cs" />
     <Compile Include="Views\TestView.xaml.cs">
       <DependentUpon>TestView.xaml</DependentUpon>
     </Compile>
@@ -137,11 +156,19 @@
     <Compile Include="Views\View1.xaml.cs">
       <DependentUpon>View1.xaml</DependentUpon>
     </Compile>
+    <Page Include="Control\ComSet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Control\DeviceState.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Control\ResultInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\TCPSet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,6 +184,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\SettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\TestView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -56,6 +56,11 @@ namespace HaierViewTest.ViewModels
            {
                return;
            }
+
+           if (SelectedTestData.TestImage==null)
+           {
+               return;
+           }
            Result = SelectedTestData.TestResult;
            StartTime = SelectedTestData.DateTime.ToString("yyyy-MM-dd hh:mm:ss");
            BarCode = SelectedTestData.FridgeCode;
