@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMachineDAL", "AutoMachi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{AEB7EC5A-2299-4E17-B135-B5607DE522E6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLL", "DLL", "{CE748839-6CAB-4486-9F41-9969606A15DB}"
+	ProjectSection(SolutionItems) = preProject
+		halcondotnet.dll = halcondotnet.dll
+		hdevenginedotnet.dll = hdevenginedotnet.dll
+		NationalInstruments.Vision.Common.dll = NationalInstruments.Vision.Common.dll
+		NationalInstruments.Vision.dll = NationalInstruments.Vision.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -44,23 +44,55 @@
                         <DatePicker Margin="10,0,0,0.4" Width="200" FontSize="20" SelectedDateFormat="Long"  />
                     </StackPanel>
                 </Border>
-
+            <Grid>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="测试数量:" Margin="0,0,10,0" ></Label>
+                        <Label Content="12" Margin="0,0,10,0"></Label>
+                        <Label Content="合格率:" Margin="0,0,10,0"></Label>
+                        <Label Content="12" ContentStringFormat="#.##%" >  </Label>
+                    </StackPanel>
+              
+            </Grid>
 
             </StackPanel>
 
         </Border>
         <dx:SimpleButton  Command="{Binding QueryCommand}"  Content="查询" FontSize="20" Margin="5" Width="150" Grid.Column="1" Glyph="{dx:DXImage SvgImages/Spreadsheet/Zoom.svg}" GlyphAlignment="Bottom" ButtonKind="Repeat" />
 
-        <dxg:GridControl Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True"
-                         ItemsSource="{Binding TestDataCollection}">
-            <dxg:GridControl.View>
-                <dxg:TableView ShowTotalSummary="True"/>
+        <dxg:GridControl  Name="Grid" Grid.Row="1" Grid.RowSpan="2" AutoGenerateColumns="None"  EnableSmartColumnsGeneration="True"
+                         SelectedItem="{Binding SelectedTestData}" SelectionMode="Row"  ItemsSource="{Binding TestDataCollection}">
+
+            <dxmvvm:Interaction.Behaviors>
+                <dxmvvm:EventToCommand EventName="SelectionChanged" Command="{Binding SelectionChangedCommand}" PassEventArgsToCommand="True" CommandParameter="{Binding ElementName=Grid}"/>
+            </dxmvvm:Interaction.Behaviors>
+
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn Name="FridgeBarcode" FieldName="FridgeCode" Header="冰箱条码" Width="2*" AllowEditing="False" SortOrder="Descending" SortMode="Value" UnboundType="String" >
+                </dxg:GridColumn>
+
+                <dxg:GridColumn Name="FridgeModel" FieldName="FridgeModel" Header="冰箱型号" Width="2*"  AllowEditing="False"  SortMode="Value" UnboundType="String" >
+                </dxg:GridColumn>
+                <dxg:GridColumn Name="TestResult" FieldName="TestResult"  Header="测试结果" Width="2*"  AllowEditing="False"  SortMode="Value" UnboundType="Boolean" >
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:TextEditSettings/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+                <dxg:GridColumn Name="TestTIme" FieldName="DateTime" Header="测试时间" RoundDateDisplayFormat="yyyy-MM-dd hh:mm:ss"  AllowEditing="False"  Width="2*" SortOrder="Descending" SortMode="Value" UnboundType="String" >
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:DateEditSettings DisplayFormat="yyyy-MM-dd hh:mm:ss"/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View >
+
+
+                <dxg:TableView ShowGroupPanel="False" ShowTotalSummary="True" ShowDragDropHint="False" AutoExpandOnDrag="False" AllowScrollingOnDrag="False"/>
             </dxg:GridControl.View>
         </dxg:GridControl>
         <Border Grid.Row="1" Grid.Column="1">
-            <Image></Image>
+            <Image Source="{Binding ShowImage}" Stretch="Uniform"></Image>
         </Border>
-        <Control:ResultInformation Margin="10" Grid.Row="2" Grid.Column="1"  TestResult="{Binding Path=Result}" FridgeCode="{Binding Path=BarCode ,Mode=TwoWay}" FridgeModel="{Binding Path=Model ,Mode=OneWay}" TestTime="{Binding Path=StartTime ,Mode=OneWay}"  />
+        <Control:ResultInformation Margin="10" Grid.Row="2" Grid.Column="1"   TestResult="{Binding Path=Result}" FridgeCode="{Binding Path=BarCode ,Mode=TwoWay}" FridgeModel="{Binding Path=Model ,Mode=OneWay}" TestTime="{Binding Path=StartTime ,Mode=OneWay}"  />
 
 
 

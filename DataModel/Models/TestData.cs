@@ -19,10 +19,10 @@ namespace DataModel.Models
 
        [Key]
        public int Id { get; set; }
-       public string FridgeMode { set; get; }
+       public string FridgeModel { set; get; }
        public string FridgeCode { set; get; }
        public bool TestResult { set; get; }
-       public string TestImage { get; set; }
+       public byte[] TestImage { get; set; }
        public DateTime DateTime { set; get; } = DateTime.Now;
 
    }

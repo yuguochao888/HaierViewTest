@@ -24,22 +24,23 @@ namespace HaierViewTest
     public partial class MainWindow : Window
     {
         private TestView testView;
-        private ComTest tesView1;
+        private ComTest ComTest;
         private Query QueryView;
         public MainWindow()
         {
             using (var test=new ViewTestEntities())
             {
-                TestData data=new TestData();
-                test.TestDatas.Add(data);
-                test.SaveChanges();
+                //TestData data=new TestData();
+                //test.TestDatas.Add(data);
+                //test.SaveChanges();
             }
 
 
             InitializeComponent();
              testView=new TestView();
-             tesView1=new ComTest();
+             ComTest=new ComTest();
              QueryView=new Query();
+             HamburgerMenu.Content = testView;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -51,7 +52,7 @@ namespace HaierViewTest
 
         private void ButtonBase1_OnClick(object sender, RoutedEventArgs e)
         {
-            HamburgerMenu.Content = tesView1;
+            HamburgerMenu.Content = ComTest;
         }
 
         private void QueryButton_OnClick(object sender, RoutedEventArgs e)
