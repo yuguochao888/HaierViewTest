@@ -70,7 +70,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition Height="1.3*"></RowDefinition>
             </Grid.RowDefinitions>
-            <dxlc:GroupBox Header="检测图片">
+            <GroupBox Header="检测图片">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -89,8 +89,8 @@
                         <Image Source="{Binding ResultImage}" Stretch="Fill"></Image>
                     </Grid>
                 </Grid>
-            </dxlc:GroupBox>
-            <dxlc:GroupBox  Header="测试项目" Grid.Row="1">
+            </GroupBox>
+            <GroupBox  Header="测试项目" Grid.Row="1">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -111,7 +111,7 @@
                     <RichTextBox Name="TestMessageText" VerticalScrollBarVisibility="Auto" Height="auto" Grid.Row="1" ></RichTextBox>
                 </Grid>
          
-            </dxlc:GroupBox>
+            </GroupBox>
 
 
         </Grid>

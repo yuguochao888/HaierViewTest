@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D;
+using HalconDotNet;
 using Camera = Basler.Pylon.Camera;
 using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace HaierViewTest.Devices
 {
-   public class BaslerClass
+   public class BaslerCamera
     {
         private Basler.Pylon.Camera camera = null;
         private PixelDataConverter converter = new PixelDataConverter();
@@ -61,7 +62,7 @@ namespace HaierViewTest.Devices
         /// <summary>
         /// 实例化第一个找到的相机
         /// </summary>
-        public BaslerClass()
+        public BaslerCamera()
         {
             try
             {
@@ -77,7 +78,7 @@ namespace HaierViewTest.Devices
         /// 根据相机UserID实例化相机
         /// </summary>
         /// <param name="UserID"></param>
-        public BaslerClass(string UserID)
+        public BaslerCamera(string UserID)
         {
             try
             {

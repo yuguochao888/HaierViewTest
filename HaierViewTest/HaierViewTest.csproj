@@ -61,6 +61,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\..\..\..\..\Program Files\MVTec\HALCON-17.12-Progress\bin\dotnet35\halcondotnet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -100,9 +103,6 @@
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\TestModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="TestView.xaml.cs">
-      <DependentUpon>TestView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\ComTestViewModel.cs" />
     <Compile Include="ViewModels\ModelSettingViewModel.cs" />
     <Compile Include="ViewModels\TestViewViewModel.cs" />
@@ -117,6 +117,9 @@
       <DependentUpon>Query.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\QueryViewModel.cs" />
+    <Compile Include="Views\TestView.xaml.cs">
+      <DependentUpon>TestView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\View1.xaml.cs">
       <DependentUpon>View1.xaml</DependentUpon>
     </Compile>
@@ -136,10 +139,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TestView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\ComTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +150,10 @@
     <Page Include="Views\Query.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TestView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\View1.xaml">
       <SubType>Designer</SubType>
