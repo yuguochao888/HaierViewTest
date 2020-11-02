@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Basler.Pylon">
@@ -106,6 +108,7 @@
     </ApplicationDefinition>
     <Compile Include="Common\Global.cs" />
     <Compile Include="Common\ImageHelper.cs" />
+    <Compile Include="Common\ImageProcess.cs" />
     <Compile Include="Common\IniFile.cs" />
     <Compile Include="Control\DeviceState.xaml.cs">
       <DependentUpon>DeviceState.xaml</DependentUpon>
@@ -121,6 +124,7 @@
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\TestModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Interface\TestAction.cs" />
     <Compile Include="Views\TestView.xaml.cs">
       <DependentUpon>TestView.xaml</DependentUpon>
     </Compile>
@@ -138,9 +142,6 @@
       <DependentUpon>Query.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\QueryViewModel.cs" />
-    <Compile Include="Views\TestView.xaml.cs">
-      <DependentUpon>TestView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\View1.xaml.cs">
       <DependentUpon>View1.xaml</DependentUpon>
     </Compile>

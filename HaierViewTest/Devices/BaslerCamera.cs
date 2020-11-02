@@ -18,7 +18,7 @@ namespace HaierViewTest.Devices
 {
    public class BaslerCamera
     {
-        private Basler.Pylon.Camera camera = null;
+        public Basler.Pylon.Camera camera = null;
         private PixelDataConverter converter = new PixelDataConverter();
         private string strUserID = null;
 

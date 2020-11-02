@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HalconDotNet;
 
 namespace HaierViewTest.Interface
 {
@@ -24,10 +25,12 @@ namespace HaierViewTest.Interface
        /// <returns></returns>
        bool GetTestResult();
 
-       /// <summary>
-       /// 开始测试
-       /// </summary>
-       void StartAction();
+      /// <summary>
+      /// 开始测试
+      /// </summary>
+      /// <param name="message">返回信息</param>
+      /// <param name="hObject">返回hoject</param>
+       void StartAction( out string message,out HObject hObject);
 
    }
 }
