@@ -64,6 +64,18 @@
     <Reference Include="halcondotnet">
       <HintPath>..\..\..\..\..\..\..\Program Files\MVTec\HALCON-17.12-Progress\bin\dotnet35\halcondotnet.dll</HintPath>
     </Reference>
+    <Reference Include="hdevenginedotnet">
+      <HintPath>..\hdevenginedotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Vision">
+      <HintPath>..\NationalInstruments.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Vision.Common">
+      <HintPath>..\NationalInstruments.Vision.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -92,17 +104,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Common\Global.cs" />
+    <Compile Include="Common\ImageHelper.cs" />
     <Compile Include="Common\IniFile.cs" />
+    <Compile Include="Control\DeviceState.xaml.cs">
+      <DependentUpon>DeviceState.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Control\ResultInformation.xaml.cs">
       <DependentUpon>ResultInformation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Devices\BaslerCamera.cs" />
     <Compile Include="Devices\CommDriver.cs" />
     <Compile Include="Devices\LightDevice.cs" />
+    <Compile Include="Interface\IViewTest.cs" />
     <Compile Include="Model\FriageModel.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Model\TestModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Views\TestView.xaml.cs">
+      <DependentUpon>TestView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\ComTestViewModel.cs" />
     <Compile Include="ViewModels\ModelSettingViewModel.cs" />
     <Compile Include="ViewModels\TestViewViewModel.cs" />
@@ -123,6 +144,10 @@
     <Compile Include="Views\View1.xaml.cs">
       <DependentUpon>View1.xaml</DependentUpon>
     </Compile>
+    <Page Include="Control\DeviceState.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Control\ResultInformation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

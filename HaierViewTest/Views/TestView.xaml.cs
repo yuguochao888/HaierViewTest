@@ -33,6 +33,25 @@ namespace HaierViewTest.Views
         {
            
 
+
+
+            logBox.AppendText("开始测试-------"+ DateTime.Now+Environment.NewLine);
+
+           var image= Image.FromFile(@"...\\...\\Image\\testpicture2.jpg");
+         byte[]  saveBytes=  Global.ImageToBytes(image);
+         App.ViewTestEntities.TestDatas.Add(new TestData()
+             {
+             DateTime = DateTime.Now,
+             FridgeCode = "123123123123",
+             FridgeModel = "BCD-123",
+             TestImage = saveBytes,
+             TestResult = true
+
+         }
+         );
+         App.ViewTestEntities.SaveChanges();
+
+            NGSet();
         }
 
 
